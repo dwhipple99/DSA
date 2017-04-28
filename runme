@@ -1,0 +1,19 @@
+# Ok, let's start by deleting everything but Java, and the messages.txt files
+make clean
+# Let's compile Dsa.java and Tester.java
+# Dsa.java is my library
+# Tester.java is just some code to excercise it
+make 
+# Let's show just the command line options and how to properly run the program (CLASSPATH, etc.)
+make help
+# Now let's run it and create a private key/public key pair only
+make genkeys
+# Now let's run it and create a signature, a private key, and a public key
+make run
+# Now let's use the signature and the public key to verify the message.
+make verify
+# Now let's change the message and see if the the signature still verifies.
+# This would also fail, if we changed the public key or the signature.
+make fail
+# Let's show the security functions supported by this version of Java
+#make security
